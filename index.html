@@ -6,34 +6,53 @@
 <title>Quovane Enterprise | AI, advertising and Shopify services</title>
 <meta name="description" content="Explore AI automation, AI agents, advertising and Shopify support from Quovane Enterprise. Get in touch to discuss your project.">
 <style>
-* {box-sizing:border-box}
-body {margin:0;background:#f8f7ef;color:#193a32;font:1.05rem/1.6 'DM Sans',Arial,sans-serif}
-header,main,footer {max-width:72rem;margin:auto;padding:1.4rem clamp(1rem,5vw,4rem)}
-header,nav {display:flex;align-items:center;justify-content:space-between;gap:1.25rem;flex-wrap:wrap}
-header {border-bottom:1px solid #bdc9bb}
-a {color:inherit;text-underline-offset:.25em}
-.brand {font-weight:bold;letter-spacing:-.04em;text-decoration:none;font-size:1.35rem}
-.hero {background:#123e33;color:#fbfaee;border-radius:1.5rem;padding:clamp(2rem,7vw,6rem);margin:1rem 0 3rem}
-h1,h2 {font-family:'Instrument Serif',Georgia,serif;font-weight:normal;letter-spacing:-.045em;line-height:1.05}
-h1 {max-width:17ch;font-size:clamp(2.75rem,7vw,5.5rem);margin:0}
-.hero p {max-width:49ch;margin:1.4rem 0 2rem}
-.button {display:inline-block;background:#d5ee96;color:#193a32;padding:.75rem 1.4rem;border-radius:2rem;font-weight:bold;text-decoration:none}
-h2 {font-size:2.8rem;margin:0 0 1.4rem}
-section {margin-bottom:3rem}
-.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:1rem}
-article {padding:1.4rem;background:#e8ede1;border-radius:.8rem}
-h3,article p {margin:0}
-h3 {margin-bottom:.5rem}
-details {border-top:1px solid #bdc9bb;padding:1rem 0}
-summary {cursor:pointer;font-weight:bold}
-footer {border-top:1px solid #bdc9bb;padding-bottom:3rem}
-a:focus-visible,summary:focus-visible {outline:3px solid #ae6700;outline-offset:3px}
+* { box-sizing:border-box }
+:root { --ink:#14382e; --paper:#faf9f3; --line:#c5cec3; --lime:#daf89c }
+body { margin:0; background:var(--paper); color:var(--ink); font:1rem/1.65 "DM Sans",Arial,sans-serif }
+header,main,footer { padding-inline:max(6vw,calc((100% - 76rem)/2)) }
+header,nav { display:flex; align-items:center; justify-content:space-between; gap:1.3rem; flex-wrap:wrap }
+header { padding-block:1.25rem; border-bottom:1px solid var(--line) }
+a { color:inherit; text-underline-offset:.3em }
+nav a { font-size:.94rem; text-decoration:none; padding:.35rem 0 }
+nav a:hover { text-decoration:underline }
+.brand { display:flex; align-items:center; gap:.7rem; font-weight:bold; letter-spacing:-.035em; text-decoration:none; font-size:1.23rem }
+.mark { display:grid; place-items:center; width:2.3rem; height:2.3rem; background:var(--ink); color:var(--lime); border-radius:50%; font:italic 1.8rem Georgia,serif }
+.hero { display:grid; grid-template-columns:1.15fr 1fr; align-items:center; gap:5%; padding-block:clamp(3rem,7vw,6rem) }
+h1,h2 { font-family:"Instrument Serif",Georgia,serif; font-weight:400; line-height:1.03; letter-spacing:-.055em; margin:0 }
+h1 { font-size:clamp(3rem,6.3vw,6.25rem) }
+h1 em { color:#437752 }
+.hero p { max-width:42ch; margin:1.5rem 0 2rem }
+.button { display:inline-flex; gap:1.6rem; align-items:center; padding:.8rem 1.35rem; color:white; background:var(--ink); border-radius:2rem; text-decoration:none }
+.button:hover { background:#295c43 }
+.art { position:relative; overflow:hidden; aspect-ratio:1.12; isolation:isolate; border-radius:48% 48% 1rem 1rem; background:radial-gradient(ellipse at 22% 14%,#819a6e,transparent 53%),linear-gradient(145deg,#365949,#09291f 84%) }
+.ribbon { position:absolute; width:85%; height:56%; left:8%; top:20%; transform:rotate(-39deg); border-radius:50%; border:clamp(.65rem,1.4vw,1.3rem) solid #a6c57c; box-shadow:inset .22rem .26rem .45rem #34523e,.2rem .22rem .4rem #152f28; background:transparent }
+.ribbon:nth-child(2) { top:27%; border-color:#bdd697 }
+.ribbon:nth-child(3) { top:34%; border-color:#d4ebad }
+.ribbon:nth-child(4) { top:41%; border-color:#ebf8c7 }
+h2 { font-size:clamp(2.35rem,4.5vw,4.2rem) }
+#services,#faq { padding-block:clamp(2.75rem,6vw,5rem); border-top:1px solid var(--line) }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.3rem 2.6rem; margin-top:2.3rem }
+article { border-top:2px solid #749272; padding:1.15rem 0 }
+h3 { margin:0 0 .5rem; font-size:1.32rem; letter-spacing:-.035em }
+article p,details p { margin:.4rem 0; color:#42564a }
+#faq { display:grid; grid-template-columns:.85fr 1.15fr; gap:8% }
+details { border-bottom:1px solid var(--line); padding:.95rem 0 }
+summary { cursor:pointer; font-weight:bold }
+footer { background:var(--ink); color:var(--paper); padding-block:3.8rem }
+footer h2 { color:var(--lime) }
+a:focus-visible,summary:focus-visible { outline:3px solid #c28218; outline-offset:4px }
+@media(max-width:720px) {
+ .hero,#faq { grid-template-columns:1fr; gap:2rem }
+ .art { aspect-ratio:1.85; border-radius:6rem 6rem .75rem .75rem }
+ .grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem }
+}
+@media(max-width:480px) { header { gap:.5rem } nav { gap:1rem } .grid { grid-template-columns:1fr } }
 </style>
 </head>
 <body>
-<header><a class="brand" href="#">Quovane Enterprise</a><nav aria-label="Main navigation"><a href="#services">Services</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></nav></header>
+<header><a class="brand" href="#"><span class="mark" aria-hidden="true">Q</span>Quovane Enterprise</a><nav aria-label="Main navigation"><a href="#services">Services</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></nav></header>
 <main>
-<section class="hero"><h1>AI, advertising &amp; Shopify support</h1><p>Tell us about the task that takes up your week, the campaign you want to run or the store you’re ready to launch.</p><a class="button" href="mailto:drovixai9@gmail.com?subject=Project%20enquiry">Request a quote</a></section>
+<section class="hero"><div><h1>AI, advertising &amp; <em>Shopify support</em></h1><p>Tell us about the task that takes up your week, the campaign you want to run or the store you’re ready to launch.</p><a class="button" href="mailto:drovixai9@gmail.com?subject=Project%20enquiry">Request a quote <span aria-hidden="true">↗</span></a></div><div class="art" aria-hidden="true"><i class="ribbon"></i><i class="ribbon"></i><i class="ribbon"></i><i class="ribbon"></i></div></section>
 <section id="services"><h2>Our services</h2><div class="grid">
 <article><h3>AI automation</h3><p>Show us a repetitive task in your workflow. We’ll explore which steps you could automate.</p></article>
 <article><h3>AI agents</h3><p>Discuss a purpose-built assistant for a specific job, such as answering recurring customer questions.</p></article>
@@ -42,10 +61,10 @@ a:focus-visible,summary:focus-visible {outline:3px solid #ae6700;outline-offset:
 <article><h3>Shopify setup</h3><p>Prepare your online store for launch, from organising your products to setting up your storefront.</p></article>
 <article><h3>Shopify store management</h3><p>Keep your store up to date as your products, prices and collections change.</p></article>
 </div></section>
-<section id="faq"><h2>Frequently asked questions</h2>
+<section id="faq"><h2>Frequently asked questions</h2><div>
 <details><summary>Can you help with an existing Shopify store?</summary><p>Yes. Tell us which parts of your store need attention and we can discuss ongoing store management.</p></details>
 <details><summary>Where should I start with automation?</summary><p>Pick one task you repeat each week. Describe the steps, which tools you use and what you’d like to happen automatically.</p></details>
 <details><summary>What should I include in a quote request?</summary><p>Email a short description of your project, any relevant store or website link, and your preferred timeline.</p></details>
-</section></main>
+</div></section></main>
 <footer id="contact"><h2>Tell us about your project</h2><p><a href="mailto:drovixai9@gmail.com">drovixai9@gmail.com</a></p><a href="https://www.instagram.com/1stquovaneenterprise/">Follow @1stquovaneenterprise on Instagram</a></footer>
 </body></html>
